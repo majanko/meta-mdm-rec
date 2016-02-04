@@ -1,0 +1,14 @@
+Library dependencies required by joynr framework. Different components are under different
+licenses (a mix of MIT, Boost Software Licence, Qt,LGPL 2.1 , GPLv2). Please see:
+
+www.boost.org for boost (Boost Library Licence)
+https://github.com/warmcat/libwebsockets for libwebsockets (Library General Public License (LGPL) 2.1)
+https://github.com/meta-qt5/meta-qt5/tree/fido/licenses (Qt-LGPL)
+
+which cover the components in those subdirectories. This means all
+metadata is MIT licensed unless otherwise stated. Source code included
+in tree for individual recipes is under the LICENSE stated in the .bb
+file for those software projects unless otherwise stated.
+
+License information for any other files is either explicitly stated
+or defaults to GPL version 2.
