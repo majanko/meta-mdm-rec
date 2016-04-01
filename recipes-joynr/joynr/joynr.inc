@@ -5,8 +5,16 @@ HOMEPAGE = "https://github.com/bmwcarit/joynr"
 LICENSE = "Apache-2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=19cbd64715b51267a47bf3750cc6a8a5"
 
+PREFERRED_VERSION_cmake ?="3.3.1"
+
+PREFERRED_VERSION_gcc ?= "4.9"
+PREFERRED_VERSION_gcc-cross-initial = "4.9"
+PREFERRED_VERSION_gcc-cross = "4.9"
+PREFERRED_VERSION_gcc-crosssdk= "4.9"
+PREFERRED_VERSION_gcc-crosssdk-initial= "4.9"
+
 # working dependency but has almost everything in it
-DEPENDS = "qtbase curl git-native libasyncipc libwebsockets boost"
+DEPENDS = "qtbase qtwebsockets curl git-native libasyncipc libwebsockets boost cmake gcc-cross-initial"
 
 # test dependency
 # DEPENDS = "qtwebsockets curl git-native spdlog"
