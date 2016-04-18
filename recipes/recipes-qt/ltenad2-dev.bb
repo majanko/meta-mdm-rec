@@ -9,6 +9,9 @@ inherit core-image
 require images.inc
 require dev_packages.inc
 
+#DEPENDS += "linux-libc-headers-dev eglibc-extra-nss-dev libsegfault-dev eglibc-thread-db-dev libcidn-dev"
+RDEPENDS += "libc6-dev linux-libc-headers-dev eglibc-extra-nss-dev libsegfault-dev eglibc-thread-db-dev libcidn-dev"
+
 IMAGE_INSTALL += "kernel-module-g-multi"
 IMAGE_INSTALL += "gadget-init"
 IMAGE_INSTALL += "usb-gadget-init5-start"
@@ -22,12 +25,22 @@ DEV_TOOLS = " \
 
 KERNEL_FEATURES = " \
     kexec-tools \
+    kdump \
     rsyslog \
 "
+
+#DEV_FEATURES = " \
+#   libc6-dev \
+#   linux-libc-headers-dev \
+#   eglibc-extra-nss-dev \
+#   libsegfault-dev \
+#   eglibc-thread-db-dev \
+#   libcidn-dev \
+#"
 
 IMAGE_INSTALL += " \
     ${DEV_TOOLS} \
     ${KERNEL_FEATURES} \
- "
+"
 
 export IMAGE_BASENAME = "ltenad2-dev"
